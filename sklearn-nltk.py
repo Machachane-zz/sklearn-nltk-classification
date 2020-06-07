@@ -123,3 +123,6 @@ predicted_mnb_stemmed = text_mnb_stemmed.predict(categories_test.data)
 np.mean(predicted_mnb_stemmed == categories_test.target)
 
 
+"""
+https://towardsdatascience.com/machine-learning-nlp-text-classification-using-scikit-learn-python-and-nltk-c52b92a7c73a
+"""
