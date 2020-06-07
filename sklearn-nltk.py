@@ -65,18 +65,18 @@ predicted_svm = text_clf_svm.predict(categories_test.data)
 np.mean(predicted_svm == categories_test.target)
 
 #-----------------------------------------------------------------------
-
+"""
 from sklearn.model_selection import GridSearchCV
 parameters = {'vect__ngram_range': [(1,1), (1,2)],
               'tfidf__ise_idf': (True, False),
               'clf__alpha': (1e-2, 1e-3)}
 
 
-gs_clf = GridSearchCV(text_clf, parameters, n_jobs=1)
+gs_clf = GridSearchCV(text_clf, parameters, n_jobs=-1)
 gs_clf = gs_clf.fit(categories_train.data, categories_train.target)
 gs_clf.best_score_
 gs_clf.best_params_
-
+"""
 #-----------------------------------------------------------------------
 
 from sklearn.model_selection import GridSearchCV
